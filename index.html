@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch API CRUD</title>
+</head>
+<body>
+    <div>
+        <h2>Fetch API - CRUD Application</h2>
+        <p id="message"></p>
+        <h3 id="addedit"></h3>
+        <form id="userForm">
+            <input type="hidden" id="id">
+            <div>
+                <div>
+                    <input type="text" id="name" placeholder="Name" required>
+                </div>
+                <div>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <button>Save</button>
+                </div>
+            </div>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th width="150">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
