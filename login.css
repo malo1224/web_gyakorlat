@@ -12,13 +12,41 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: auto;
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+main.center-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
     padding: 20px;
 }
+
 
 .form-card {
     background: var(--card-bg);
@@ -26,7 +54,11 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 380px; /* Kicsit keskenyebb, mint a regisztráció */
+    max-width: 400px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h2 {
@@ -36,8 +68,9 @@ h2 {
     margin-top: 0;
 }
 
+
 form div {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 input {
@@ -47,7 +80,7 @@ input {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease;
 }
 
 input:focus {
@@ -80,5 +113,21 @@ button:active {
 @media (max-width: 480px) {
     .form-card {
         padding: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    header {
+        position: relative;
+        text-align: center;
+        padding: 10px;
+    }
+    header nav {
+        justify-content: center;
+    }
+    main.center-container {
+        min-height: auto;
     }
 }

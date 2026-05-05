@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
     <div class="form-card">
         <h2>Login</h2>
         <form id="loginForm">
+
             <div>
-                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="email" placeholder="Email" required>
             </div>
             <div>
                 <input type="password" id="password" placeholder="Password" required>
@@ -20,9 +29,38 @@
                 <button type="submit">Login</button>
             </div>
         </form>
-        <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">
-            Not registered yet? <a href="register.html" style="color: #0056b3; text-decoration: none;">Register here!</a>
-        </p>
     </div>
 </body>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        fetch('http://localhost/api.php?type=users&action=login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email, password: password })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status == "Sikeres bejelentkezés") {
+                    alert(data.status);
+                    sessionStorage.setItem('token', data.token);
+                    window.location.href = 'index.html';
+                } else {
+                    alert('Sikertelen bejelentkezés: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred during login.');
+            });
+    });
+
+</script>
+
 </html>

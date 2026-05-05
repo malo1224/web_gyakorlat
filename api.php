@@ -50,7 +50,7 @@ function handleUsers($pdo, $method, $input) {
             $update->execute([$token, $user['id']]);
             
             echo json_encode([
-                "status" => "Sikeres login",
+                "status" => "Sikeres bejelentkezés",
                 "token" => $token
             ]);
         } else {

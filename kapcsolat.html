@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolat</title>
+    <link rel="stylesheet" href="kapcsolat.css">
+</head>
+<body>
+     <a href="index.html">Home</a>
+    <div class="kapcsolat-container">
+    <h2>Kapcsolat</h2>
+    <form id="kapcsolatForm" class="kapcsolat-form" action="..." method="post">
+        
+        <div class="form-group">
+            <label for="nev">Full name</label>
+            <input type="text" name="nev" id="nev">
+            <div id="nevHiba" class="error-text"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail address</label>
+            <input type="text" name="email" id="email">
+            <div id="emailHiba" class="error-text"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="szoveg">Message</label>
+            <textarea name="szoveg" id="szoveg"></textarea>
+            <div id="szovegHiba" class="error-text"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</div>
+</body>
+</html>

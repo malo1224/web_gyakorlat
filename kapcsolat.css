@@ -1,0 +1,81 @@
+/* Kapcsolat oldal specifikus stílusok */
+
+.kapcsolat-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.kapcsolat-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Fix méretű szövegdobozok beállítása */
+.form-group input[type="text"], 
+.form-group textarea {
+    width: 100%; /* Kitölti a tárolót */
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+    
+    /* Ez akadályozza meg, hogy a felhasználó átméretezze */
+    resize: none; 
+}
+
+/* Fókusz állapot (amikor belelép a felhasználó) */
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: #fff;
+}
+
+/* Fix magasság a textarea-nak */
+.form-group textarea {
+    height: 150px;
+}
+
+/* Hibaüzenetek helye (JS-nek) */
+.error-text {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+    min-height: 18px; /* Megakadályozza az ugrálást, ha megjelenik a szöveg */
+}
+
+/* Beküldő gomb */
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
