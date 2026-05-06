@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db = 'formula1';
-$user = 'formula1';
-$pass = '#7uVe##Duphl';
+$db = 'dani12242';
+$user = 'dani12242';
+$pass = 'e2TSinmNgSC';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

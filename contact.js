@@ -12,7 +12,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     btn.disabled = true;
 
     try {
-        const response = await fetch('http://localhost/api.php?type=messages', {
+        const response = await fetch('http://projekt.bzzyvc2.nhely.hu/api.php?type=messages', {
             method: 'POST',
             headers: {
                 Authorization: sessionStorage.getItem("token"),
@@ -40,7 +40,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
 async function fetchMessages() {
     try {
-        const response = await fetch('http://localhost/api.php?type=messages');
+        const response = await fetch('http://projekt.bzzyvc2.nhely.hu/api.php?type=messages');
         const messages = await response.json();
 
         const chatBox = document.getElementById('chat-box');

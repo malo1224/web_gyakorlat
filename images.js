@@ -28,7 +28,7 @@ document.getElementById("uploadForm").addEventListener("submit", async (e) => {
     formData.append('image', fileInput.files[0]);
 
     try {
-        const response = await fetch('http://localhost/api.php?type=file', {
+        const response = await fetch('http://projekt.bzzyvc2.nhely.hu/api.php?type=file', {
             method: "POST",
             headers: {
                 "Authorization": token
@@ -55,7 +55,7 @@ document.getElementById("uploadForm").addEventListener("submit", async (e) => {
 async function loadImages() {
     try {
         // Sima GET kérés, nem kell token!
-        const response = await fetch('http://localhost/api.php?type=public_images');
+        const response = await fetch('http://projekt.bzzyvc2.nhely.hu/api.php?type=public_images');
         const images = await response.json();
         
         const container = document.getElementById('gallery');
