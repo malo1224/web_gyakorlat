@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Ápr 15. 15:13
+-- Létrehozás ideje: 2026. Máj 06. 14:58
 -- Kiszolgáló verziója: 10.4.32-MariaDB
--- PHP verzió: 8.0.30
+-- PHP verzió: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,36 +43,13 @@ CREATE TABLE `eredmenyek` (
 --
 
 INSERT INTO `eredmenyek` (`id`, `datum`, `pilotaaz`, `helyezes`, `hiba`, `csapat`, `tipus`, `motor`) VALUES
-(345, '1958-10-19', 369, 6, NULL, 'Temple Buell', 'Maserati', 'Maserati'),
-(346, '1954-07-17', 460, 11, NULL, 'Sir Jeremy Boles', 'Connaught', 'Lea'),
-(347, '1950-09-03', 42, 2, NULL, 'Scuderia Ferrari', 'Ferrari', 'Ferrari'),
-(348, '1951-10-28', 248, NULL, 'gyújtás', 'Scuderia Ferrari', 'Ferrari', 'Ferrari'),
-(349, '1951-07-29', 721, 3, NULL, 'Scuderia Ferrari', 'Ferrari', 'Ferrari'),
-(350, '1951-05-30', 167, NULL, 'tengely', 'Ludson Morris', 'Kurtis', 'Offenhauser'),
-(351, '1957-05-30', 645, 9, NULL, 'Phillips', 'Phillips', 'Offenhauser'),
-(352, '1959-08-02', 597, 6, NULL, 'Scuderia Centro Sud', 'Cooper', 'Maserati'),
-(353, '1960-05-30', 43, NULL, 'gyújtás', 'Kurtis Kraft', 'Kurtis', 'Offenhauser'),
-(354, '1953-05-30', 683, 9, NULL, 'JC Agajanian', 'Kurtis', 'Offenhauser'),
-(355, '1950-05-21', 625, 4, NULL, 'Scuderia Ferrari', 'Ferrari', 'Ferrari'),
-(356, '1957-05-19', 83, NULL, 'karambol', 'Vandervell Products Ltd', 'Vanwall', 'Vanwall'),
-(357, '1955-05-22', 83, 9, NULL, 'Daimler Benz AG', 'Mercedes', 'Mercedes'),
-(358, '1952-05-18', 382, 2, NULL, 'Ecurie Espadon', 'Ferrari', 'Ferrari'),
-(359, '1959-05-31', 19, 4, NULL, 'Team Lotus', 'Lotus', 'Climax'),
-(360, '1957-09-08', 1, 2, NULL, 'Officine Alfieri Maserati', 'Maserati', 'Maserati'),
-(361, '1960-06-06', 743, NULL, 'futómű', 'Team Lotus', 'Lotus', 'Climax'),
-(362, '1954-08-01', 759, 8, NULL, 'Ecurie Rosier', 'Ferrari', 'Ferrari'),
-(363, '1958-07-06', 452, NULL, 'motor', 'Scuderia Centro Sud', 'Maserati', 'Maserati'),
-(364, '1956-06-03', 83, 3, NULL, 'Officine Alfieri Maserati', 'Maserati', 'Maserati'),
-(365, '1956-01-22', 45, 6, NULL, 'Alberto Uria', 'Maserati', 'Maserati'),
-(366, '1960-05-29', 115, NULL, 'kizárták', 'Reventlow Automobiles Inc', 'Scarab', 'Scarab'),
+(362, '1954-08-01', 759, 8, '', 'Ecurie Rosier', 'Ferrariaaa', 'Ferrari'),
+(364, '1956-06-03', 83, 3, '', 'Officine Alfieri Maserati', 'Maseratiaaaa', 'Maserati'),
+(366, '1960-05-29', 115, 0, 'kizárták', 'Reventlow Automobiles Inca', 'Scaraba', 'Scarab'),
 (367, '1956-05-30', 445, 1, NULL, 'Watson', 'Watson', 'Offenhauser'),
-(368, '1960-02-07', 150, 5, NULL, 'Scuderia Ferrari', 'Ferrari', 'Ferrari'),
 (369, '1956-08-05', 238, NULL, 'túlhajtás', 'Scuderia Centro Sud', 'Maserati', 'Maserati'),
 (370, '1954-01-17', 448, NULL, 'pályaelhagyás', 'Scuderia Ferrari', 'Ferrari', 'Ferrari'),
-(371, '1955-06-05', 655, NULL, 'nem rajtolt el', 'Scuderia Ferrari', 'Ferrari', 'Ferrari'),
-(372, '1952-06-22', 606, NULL, 'karambol', 'Equipe Gordini', 'Gordini', 'Gordini'),
 (373, '1954-09-05', 248, NULL, 'kuplung', 'Officine Alfieri Maserati', 'Maserati', 'Maserati'),
-(374, '1959-08-02', 238, 7, NULL, 'Owen Racing Organisation', 'BRM', 'BRM'),
 (375, '1957-05-19', 238, NULL, 'kiállás', 'Officine Alfieri Maserati', 'Maserati', 'Maserati'),
 (376, '1957-05-30', 96, NULL, 'gázadagoló', 'Kurtis Kraft', 'Kurtis', 'Offenhauser'),
 (377, '1950-05-13', 742, 10, NULL, NULL, 'Maserati', 'Maserati'),
@@ -386,7 +363,9 @@ INSERT INTO `eredmenyek` (`id`, `datum`, `pilotaaz`, `helyezes`, `hiba`, `csapat
 (685, '1957-05-30', 186, 13, NULL, 'Kurtis Kraft', 'Kurtis', 'Offenhauser'),
 (686, '1957-09-08', 526, NULL, 'motor', NULL, 'Maserati', 'Maserati'),
 (687, '1952-09-07', 759, 10, NULL, 'Ecurie Rosier', 'Ferrari', 'Ferrari'),
-(688, '1956-08-05', 36, NULL, 'motor', 'Scuderia Centro Sud', 'Ferrari', 'Ferrari');
+(688, '1956-08-05', 36, NULL, 'motor', 'Scuderia Centro Sud', 'Ferrari', 'Ferrari'),
+(689, '1955-08-01', 9999, 124, 'asega', 'seaga', 'egasg', 'aeags'),
+(690, '1955-08-01', 9992, 122, 'asega', 'seaga', 'egasg', 'aeags');
 
 -- --------------------------------------------------------
 
@@ -407,12 +386,10 @@ CREATE TABLE `gp` (
 
 INSERT INTO `gp` (`id`, `datum`, `nev`, `helyszin`) VALUES
 (1, '1994-05-15', 'Monacoi', 'Monaco'),
-(2, '1979-07-14', 'Brit', 'Nagy-Britannia'),
 (3, '1976-07-18', 'Brit', 'Nagy-Britannia'),
 (4, '1994-07-31', 'Német', 'Németország'),
 (5, '1978-09-10', 'Olasz', 'Olaszország'),
 (6, '1976-08-15', 'Osztrák', 'Ausztria'),
-(7, '2006-10-08', 'Japán', 'Japán'),
 (8, '1952-05-18', 'Svájci', 'Svájc'),
 (9, '1983-08-14', 'Osztrák', 'Ausztria'),
 (10, '1993-05-23', 'Monacoi', 'Monaco'),
@@ -425,7 +402,6 @@ INSERT INTO `gp` (`id`, `datum`, `nev`, `helyszin`) VALUES
 (17, '1975-06-22', 'Holland', 'Hollandia'),
 (18, '2001-10-14', 'Japán', 'Japán'),
 (19, '1979-02-04', 'Brazil', 'Brazília'),
-(20, '1976-08-29', 'Holland', 'Hollandia'),
 (21, '1999-09-26', 'Európa', 'Németország'),
 (22, '1954-09-05', 'Olasz', 'Olaszország'),
 (23, '1992-11-08', 'Ausztrál', 'Ausztrália'),
@@ -1161,7 +1137,8 @@ INSERT INTO `gp` (`id`, `datum`, `nev`, `helyszin`) VALUES
 (753, '1963-05-26', 'Monacoi', 'Monaco'),
 (754, '1978-05-21', 'Belga', 'Belgium'),
 (755, '1989-11-05', 'Ausztrál', 'Ausztrália'),
-(756, '1993-07-04', 'Francia', 'Franciaország');
+(756, '1993-07-04', 'Francia', 'Franciaország'),
+(757, '2024-05-20', 'asdasd', 'gsrgsdrg');
 
 -- --------------------------------------------------------
 
@@ -1182,7 +1159,6 @@ CREATE TABLE `pilota` (
 --
 
 INSERT INTO `pilota` (`az`, `nev`, `nem`, `szuldat`, `nemzet`) VALUES
-(1, 'Juan-Manuel Fangio', 'F', '1911-06-24', 'argentín'),
 (2, 'Sam Posey', 'F', '1944-05-26', 'amerikai'),
 (3, 'Ernesto Prinoth', 'F', '1923-01-01', 'olasz'),
 (4, 'Hubert Hahne', 'F', '1935-03-28', 'német'),
@@ -1193,9 +1169,7 @@ INSERT INTO `pilota` (`az`, `nev`, `nem`, `szuldat`, `nemzet`) VALUES
 (9, 'Heinz-Harald Frentzen', 'F', '1967-05-18', 'német'),
 (10, 'Eddie Russo', 'F', '1925-11-19', 'amerikai'),
 (11, 'Derek Warwick', 'F', '1954-08-27', 'brit'),
-(12, 'Jo Siffert', 'F', '1936-07-07', 'svájci'),
 (13, 'Fabrizio Barbazza', 'F', '1963-04-02', 'olasz'),
-(14, 'Damon Hill', 'F', '1960-09-17', 'brit'),
 (15, 'Mike Harris', 'F', '1939-05-25', 'zimbabwei'),
 (16, 'Hans Heyer', 'F', '1943-03-16', 'német'),
 (17, 'Peter Revson', 'F', '1939-02-27', 'amerikai'),
@@ -1984,6 +1958,48 @@ INSERT INTO `pilota` (`az`, `nev`, `nem`, `szuldat`, `nemzet`) VALUES
 (800, 'Jim Rathmann', 'F', '1928-07-16', 'amerikai'),
 (801, 'Johnny Mantz', 'F', '1918-09-18', 'amerikai');
 
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `token` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `password`, `token`) VALUES
+(1, 'teszt@email.com', '$2y$10$KErrEVkoq6y96UYnFTakAe5jUSextzmWJ9oZ8BCfHGSLJMp9mytYe', '01f3598bd3c47d5d2b36000fc9fda0f2'),
+(2, 'test@email.com', '$2y$10$L281Mxh1ZaAtRuGxnLfZJe6MW.OPOi7QQoCFsBrlASZbk3cQtm0Cm', 'd7bf0a4304470acd79778238e092f0d5');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `uzenetek`
+--
+
+CREATE TABLE `uzenetek` (
+  `id` int(11) NOT NULL,
+  `sender` varchar(100) DEFAULT NULL,
+  `content` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `uzenetek`
+--
+
+INSERT INTO `uzenetek` (`id`, `sender`, `content`, `created_at`) VALUES
+(1, 'test@email.com', 'esdrhsdfhsdfh', '2026-05-06 12:43:48'),
+(2, 'Anonymous', 'drsfhhdfsghdfgsshdf', '2026-05-06 12:47:12');
+
 --
 -- Indexek a kiírt táblákhoz
 --
@@ -2007,6 +2023,18 @@ ALTER TABLE `pilota`
   ADD PRIMARY KEY (`az`);
 
 --
+-- A tábla indexei `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `uzenetek`
+--
+ALTER TABLE `uzenetek`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
 
@@ -2014,19 +2042,31 @@ ALTER TABLE `pilota`
 -- AUTO_INCREMENT a táblához `eredmenyek`
 --
 ALTER TABLE `eredmenyek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=689;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=691;
 
 --
 -- AUTO_INCREMENT a táblához `gp`
 --
 ALTER TABLE `gp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=757;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=758;
 
 --
 -- AUTO_INCREMENT a táblához `pilota`
 --
 ALTER TABLE `pilota`
   MODIFY `az` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=802;
+
+--
+-- AUTO_INCREMENT a táblához `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT a táblához `uzenetek`
+--
+ALTER TABLE `uzenetek`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
