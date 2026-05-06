@@ -145,6 +145,14 @@ tr:hover {
 .btn-edit { background-color: #ffc107; color: black; margin-right: 5px; }
 .btn-delete { background-color: #dc3545; color: white; }
 
+#userName {
+    color: #fff;
+    display: block;
+    left: 1rem;
+    position: absolute;
+    top: 1rem;
+}
+
 /* Mobil nézet finomhangolása (Media Queries) */
 @media (max-width: 600px) {
     nav {

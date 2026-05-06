@@ -50,9 +50,10 @@
                 if (data.status == "Sikeres bejelentkezés") {
                     alert(data.status);
                     sessionStorage.setItem('token', data.token);
+                    sessionStorage.setItem('email', email);
                     window.location.href = 'index.html';
                 } else {
-                    alert('Sikertelen bejelentkezés: ' + data.message);
+                    alert('Sikertelen bejelentkezés: ' + data.status);
                 }
             })
             .catch(error => {

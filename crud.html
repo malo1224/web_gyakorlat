@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span id="userName"></span>
+            <a href="index.html">Home</a>
+            <a href="images.html">Images</a>
+            <a href="contact.html">Contact</a>
+            <a href="crud.html">CRUD</a>
+            <a id="logintBtn" href="login.html">Login</a>
+            <a id="registerBtn" href="register.html">Register</a>
+            <a id="logoutBtn">Logout</a>
+        </nav>
+    </header>
+
+    <div class="form-container-div">
+        <div class="form-container">
+            <h3 id="createTitle">Új pálya hozzáadása</h3>
+            <input type="hidden" id="id">
+            <input type="text" id="datum" placeholder="Verseny dátuma" required>
+            <input type="text" id="nev" placeholder="Pálya neve" required>
+            <input type="text" id="helyszin" placeholder="Pálya helyszine">
+            <button onclick="create()">Mentés</button>
+            <button onclick="resetForm()" style="background-color: #6c757d;">Mégsem</button>
+        </div>
+
+        <div class="form-container">
+            <h3 id="updateTitle">pálya módosítása</h3>
+            <input type="hidden" id="editId">
+            <input type="text" id="editDatum" placeholder="Verseny dátuma" required>
+            <input type="text" id="editNev" placeholder="Pálya neve" required>
+            <input type="text" id="editHelyszin" placeholder="Pálya helyszine">
+            <button onclick="update()">Mentés</button>
+            <button onclick="resetForm('edit')" style="background-color: #6c757d;">Mégsem</button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Verseny Dátum</th>
+                <th>Pályan név</th>
+                <th>Pálya helyszíne</th>
+                <th>Műveletek</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+</body>
+<script src="nav.js"></script>
+<script src="crud.js"></script>
+
+</html>

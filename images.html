@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .upload-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Elrejtjük az eredeti gombot */
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Egyedi feltöltő gomb */
+        .custom-file-upload {
+            display: inline-block;
+            padding: 12px 24px;
+            cursor: pointer;
+            background-color: #e8f0fe;
+            color: #1a73e8;
+            border: 2px dashed #1a73e8;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        #file-name {
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Küldés gomb */
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span id="userName"></span>
+            <a href="index.html">Home</a>
+            <a href="images.html">Images</a>
+            <a href="contact.html">Contact</a>
+            <a href="crud.html">CRUD</a>
+            <a id="logintBtn" href="login.html">Login</a>
+            <a id="registerBtn" href="register.html">Register</a>
+            <a id="logoutBtn">Logout</a>
+        </nav>
+    </header>
+
+    <div class="upload-container">
+        <form id="uploadForm">
+            <h2>Kép feltöltése (&lt;1MB)</h2>
+
+            <div class="file-input-wrapper">
+                <input type="file" name="image" id="file-upload" accept="image/*" />
+                <label for="file-upload" class="custom-file-upload">
+                    <span class="icon">📁</span> Fájl kiválasztása
+                </label>
+            </div>
+
+            <div id="file-name">Nincs fájl kiválasztva</div>
+
+            <button type="submit" class="submit-btn">Feltöltés indítása</button>
+        </form>
+    </div>
+
+    <div class="gallery-wrapper">
+        <h2>Képgaléria</h2>
+
+        <div class="gallery-grid" id="gallery"></div>
+    </div>
+
+</body>
+<script src="nav.js"></script>
+<script src="images.js"></script>
+
+</html>
